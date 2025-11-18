@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFT Marketplace - Product Detail</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header с Bootstrap -->
+    <header class="header navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3">
+        <div class="container">
+            <div class="logo">
+                <img src="img/log.png" alt="Логотип" class="img-fluid" style="height: 40px;">
+            </div>
+            
+            <!-- Бургер-меню -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <nav class="nav navbar-nav mx-auto">
+                    <a class="nav-link fw-medium text-dark mx-2" href="#product">PRODUCT</a>
+                    <a class="nav-link fw-medium text-dark mx-2" href="#categories">CATEGORIES</a>
+                    <a class="nav-link fw-medium text-dark mx-2" href="#progress">STATS</a>
+                    <a class="nav-link fw-medium text-dark mx-2" href="#faq">FAQ</a>
+                </nav>
+
+                <div class="search me-3">
+                    <input type="text" class="form-control rounded-pill" placeholder="Search Art Work / Creator">
+                </div>
+                <button class="wallet btn btn-primary rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#walletModal">CONNECT WALLET</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <div class="container mt-4" id="product">
+        <button class="back-btn btn btn-link text-decoration-none p-0 mb-4">← Product Detail</button>
+
+        <div class="card shadow-sm border-0 overflow-hidden">
+            <div class="row g-0">
+                <div class="col-md-6">
+                    <div class="image-container h-100">
+                        <img src="img/Image.png" class="img-fluid w-100 h-100 object-fit-cover" alt="Project Sun-Glass">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="content p-4 p-lg-5">
+                        <h1 class="mb-3">Project Sun-Glass</h1>
+                        <p class="description text-muted mb-4">
+                            A collection of 10,000 utility-enabled PFPs that feature a richly diverse and unique pool of rarity-powered traits.
+                        </p>
+
+                        <div class="owners d-flex gap-4 mb-4">
+                            <div class="creator d-flex align-items-center gap-3">
+                                <img src="img/Ellipse 28.png" class="rounded-circle" alt="Creator" style="width: 50px; height: 50px;">
+                                <div>
+                                    <span class="text-muted small">Created by</span><br>
+                                    <strong class="h6 mb-0">Perperzon</strong>
+                                </div>
+                            </div>
+                            <div class="owner d-flex align-items-center gap-3">
+                                <img src="img/Ellipse 29.png" class="rounded-circle" alt="Owner" style="width: 50px; height: 50px;">
+                                <div>
+                                    <span class="text-muted small">Owned by</span><br>
+                                    <strong class="h6 mb-0">Videz</strong>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bid-info bg-light rounded p-4 mb-4">
+                            <div class="row text-center">
+                                <div class="col-6">
+                                    <span class="text-muted small">Current Bid</span><br>
+                                    <strong class="h5 mb-0">⚡ 1.75</strong>
+                                </div>
+                                <div class="col-6">
+                                    <span class="text-muted small">End in</span><br>
+                                    <strong class="h5 mb-0">Jun 17, 2023 at 05:08</strong>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="bid-btn btn btn-dark w-100 py-3 fw-semibold" data-bs-toggle="modal" data-bs-target="#bidModal">🛒 Place Bid</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ДОПОЛНИТЕЛЬНЫЙ КОМПОНЕНТ 1: Progress Bars -->
+    <section class="progress-section py-5 bg-light" id="progress">
+        <div class="container">
+            <h2 class="text-center display-5 fw-bold mb-5">Collection Progress</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body p-4">
+                            <h4 class="mb-3">Minting Progress</h4>
+                            <div class="mb-3">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>Items Minted</span>
+                                    <span>7,542/10,000</span>
+                                </div>
+                                <div class="progress" style="height: 8px;">
+                                    <div class="progress-bar bg-primary" role="progressbar" style="width: 75.42%" aria-valuenow="75.42" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>Unique Owners</span>
+                                    <span>68%</span>
+                                </div>
+                                <div class="progress" style="height: 8px;">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: 68%" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>Floor Price Growth</span>
+                                    <span>+245%</span>
+                                </div>
+                                <div class="progress" style="height: 8px;">
+                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body p-4">
+                            <h4 class="mb-3">Community Stats</h4>
+                            <div class="mb-3">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>Community Fund</span>
+                                    <span>₣ 42,580</span>
+                                </div>
+                                <div class="progress" style="height: 8px;">
+                                    <div class="progress-bar bg-info" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>Staking Rewards</span>
+                                    <span>92% Distributed</span>
+                                </div>
+                                <div class="progress" style="height: 8px;">
+                                    <div class="progress-bar bg-purple" role="progressbar" style="width: 92%" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>Roadmap Completion</span>
+                                    <span>Phase 3/5</span>
+                                </div>
+                                <div class="progress" style="height: 8px;">
+                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция с Табами -->
+    <section class="tabs-section py-5 my-5 bg-white" id="categories">
+        <div class="container">
+            <h2 class="text-center display-5 fw-bold mb-5">NFT Categories</h2>
+            
+            <ul class="nav nav-tabs justify-content-center mb-4" id="nftTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active fw-semibold" id="art-tab" data-bs-toggle="tab" data-bs-target="#art" type="button" role="tab">
+                        🎨 Digital Art
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link fw-semibold" id="collectibles-tab" data-bs-toggle="tab" data-bs-target="#collectibles" type="button" role="tab">
+                        🏆 Collectibles
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link fw-semibold" id="music-tab" data-bs-toggle="tab" data-bs-target="#music" type="button" role="tab">
+                        🎵 Music
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link fw-semibold" id="virtual-tab" data-bs-toggle="tab" data-bs-target="#virtual" type="button" role="tab">
+                        🌐 Virtual Worlds
+                    </button>
+                </li>
+            </ul>
+
+            <div class="tab-content" id="nftTabsContent">
+                <div class="tab-pane fade show active" id="art" role="tabpanel">
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body text-center p-4">
+                                    <div class="display-1 mb-3">🖼️</div>
+                                    <h3 class="h4 mb-3">Digital Art NFTs</h3>
+                                    <p class="text-muted">Unique digital artworks from talented artists around the world. Each piece is verified and authenticated on the blockchain.</p>
+                                    <button class="btn btn-outline-primary mt-3">Explore Art</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body text-center p-4">
+                                    <div class="display-1 mb-3">👨‍🎨</div>
+                                    <h3 class="h4 mb-3">Artist Collections</h3>
+                                    <p class="text-muted">Discover curated collections from emerging and established digital artists. Support creators directly.</p>
+                                    <button class="btn btn-outline-primary mt-3">View Artists</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-pane fade" id="collectibles" role="tabpanel">
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body text-center p-4">
+                                    <div class="display-1 mb-3">🃏</div>
+                                    <h3 class="h4 mb-3">Trading Cards</h3>
+                                    <p class="text-muted">Rare digital trading cards with varying rarities and special editions. Collect complete sets for rewards.</p>
+                                    <button class="btn btn-outline-success mt-3">View Cards</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body text-center p-4">
+                                    <div class="display-1 mb-3">🎮</div>
+                                    <h3 class="h4 mb-3">Gaming Items</h3>
+                                    <p class="text-muted">In-game assets, characters, and items you truly own. Trade, sell, or use across compatible games.</p>
+                                    <button class="btn btn-outline-success mt-3">Game Items</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-pane fade" id="music" role="tabpanel">
+                    <div class="text-center py-5">
+                        <div class="display-1 mb-4">🎵</div>
+                        <h3 class="h2 mb-3">Music & Audio NFTs</h3>
+                        <p class="text-muted lead mb-4">Own exclusive music tracks, albums, and audio experiences from your favorite artists.</p>
+                        <button class="btn btn-primary btn-lg">Listen Now</button>
+                    </div>
+                </div>
+                
+                <div class="tab-pane fade" id="virtual" role="tabpanel">
+                    <div class="text-center py-5">
+                        <div class="display-1 mb-4">🌐</div>
+                        <h3 class="h2 mb-3">Virtual Real Estate</h3>
+                        <p class="text-muted lead mb-4">Own land and property in virtual worlds. Build, develop, and monetize your digital spaces.</p>
+                        <button class="btn btn-dark btn-lg">Explore Worlds</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- История ставок и форма -->
+    <div class="container my-5">
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <div class="bid-history bg-white rounded-3 shadow-sm p-4 h-100">
+                    <h2 class="mb-4">Bid History</h2>
+                    <div class="chart">
+                        <img src="img/Statics.png" class="img-fluid" alt="График ставок">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="history-bid bg-white rounded-3 shadow-sm p-4 h-100">
+                    <h2 class="mb-4">History of Bid</h2>
+                    <div class="bid d-flex align-items-center gap-3 py-3 border-bottom">
+                        <img src="img/Ellipse 30.png" class="rounded-circle" alt="Repo" style="width: 40px; height: 40px;">
+                        <div class="bid-info flex-grow-1">
+                            <p class="name fw-medium mb-1">Repo</p>
+                            <p class="date text-muted small mb-0">May 17, 2022 at 12:08</p>
+                        </div>
+                        <p class="amount fw-medium text-dark mb-0">1.55 ETH</p>
+                    </div>
+
+                    <div class="bid d-flex align-items-center gap-3 py-3">
+                        <img src="img/Ellipse 31.png" class="rounded-circle" alt="Travo" style="width: 40px; height: 40px;">
+                        <div class="bid-info flex-grow-1">
+                            <p class="name fw-medium mb-1">Travo</p>
+                            <p class="date text-muted small mb-0">May 16, 2022 at 12:08</p>
+                        </div>
+                        <p class="amount fw-medium text-dark mb-0">1.40 ETH</p>
+                    </div>
+
+                    <h3 class="mt-4 mb-3">Your Bid</h3>
+                    
+                    <!-- Форма с валидацией -->
+                    <form class="needs-validation" novalidate id="bidForm">
+                        <div class="bid-input d-flex gap-2 mb-3">
+                            <select class="form-select flex-shrink-0" style="width: 100px;" required>
+                                <option value="">ETH</option>
+                                <option value="ETH">ETH</option>
+                                <option value="BTC">BTC</option>
+                            </select>
+                            <input type="number" class="form-control" placeholder="Enter bid amount" min="0.1" step="0.1" required>
+                            <button class="btn btn-dark flex-shrink-0" type="submit">Submit</button>
+                        </div>
+                        <div class="invalid-feedback d-block">
+                            Please enter a valid bid amount (minimum 0.1 ETH).
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Секция со Слайдером -->
+    <section class="slider-section py-5 my-5">
+        <div class="container">
+            <h2 class="text-center display-5 fw-bold mb-5">Trending NFTs</h2>
+            
+            <div id="nftCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#nftCarousel" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#nftCarousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#nftCarousel" data-bs-slide-to="2"></button>
+                </div>
+                
+                <div class="carousel-inner rounded-3 overflow-hidden">
+                    <div class="carousel-item active">
+                        <div class="row align-items-center bg-gradient-primary text-white p-5 min-vh-50">
+                            <div class="col-md-6">
+                                <h3 class="display-6 fw-bold mb-3">CryptoPunks</h3>
+                                <p class="lead mb-4">The original NFT avatar project that started it all. Own a piece of crypto history.</p>
+                                <div class="d-flex gap-3 mb-3">
+                                    <span class="badge bg-light text-dark">10K Collection</span>
+                                    <span class="badge bg-light text-dark">Since 2017</span>
+                                </div>
+                                <button class="btn btn-light btn-lg">View Collection</button>
+                            </div>
+                            <div class="col-md-6 text-center">
+                                <div class="display-1">👾</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-item">
+                        <div class="row align-items-center bg-gradient-success text-white p-5 min-vh-50">
+                            <div class="col-md-6">
+                                <h3 class="display-6 fw-bold mb-3">Bored Ape Yacht Club</h3>
+                                <p class="lead mb-4">Join the most exclusive NFT community with unique benefits and utilities.</p>
+                                <div class="d-flex gap-3 mb-3">
+                                    <span class="badge bg-light text-dark">10K Apes</span>
+                                    <span class="badge bg-light text-dark">Utilities</span>
+                                </div>
+                                <button class="btn btn-light btn-lg">Explore Apes</button>
+                            </div>
+                            <div class="col-md-6 text-center">
+                                <div class="display-1">🐵</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-item">
+                        <div class="row align-items-center bg-gradient-warning text-dark p-5 min-vh-50">
+                            <div class="col-md-6">
+                                <h3 class="display-6 fw-bold mb-3">Art Blocks</h3>
+                                <p class="lead mb-4">Generative art created by algorithms. Each piece is unique and created on-demand.</p>
+                                <div class="d-flex gap-3 mb-3">
+                                    <span class="badge bg-dark text-white">Generative</span>
+                                    <span class="badge bg-dark text-white">Unique</span>
+                                </div>
+                                <button class="btn btn-dark btn-lg">Create Art</button>
+                            </div>
+                            <div class="col-md-6 text-center">
+                                <div class="display-1">🎨</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="carousel-control-prev" type="button" data-bs-target="#nftCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#nftCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция Top Collection -->
+    <section class="top-collection bg-light py-5 my-5">
+        <div class="container">
+            <h2 class="text-center display-5 fw-bold mb-5">Top Collection</h2>
+            <div class="collection-table bg-white rounded-3 shadow-sm overflow-hidden">
+                <div class="table-responsive">
+                    <table class="table table-hover mb-0">
+                        <thead class="table-dark">
+                            <tr>
+                                <th class="ps-4">Collection</th>
+                                <th>Volume</th>
+                                <th>24h %</th>
+                                <th>Floor Price</th>
+                                <th>Owner</th>
+                                <th class="pe-4">Items</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="ps-4">
+                                    <div class="collection-info d-flex align-items-center gap-3">
+                                        <img src="image (2).png" class="rounded" alt="Alex Co." style="width: 40px; height: 40px;">
+                                        <div>
+                                            <strong class="d-block">Alex Co.</strong>
+                                            <span class="text-muted small">By Alex</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="fw-semibold">$ 8,456</td>
+                                <td class="text-success fw-medium">+27.70%</td>
+                                <td class="fw-semibold">$ 3.5</td>
+                                <td class="text-muted">2.26</td>
+                                <td class="text-muted pe-4">$80</td>
+                            </tr>
+                            <tr>
+                                <td class="ps-4">
+                                    <div class="collection-info d-flex align-items-center gap-3">
+                                        <img src="image (3).png" class="rounded" alt="Alex Co." style="width: 40px; height: 40px;">
+                                        <div>
+                                            <strong class="d-block">Alex Co.</strong>
+                                            <span class="text-muted small">By Alex</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="fw-semibold">$ 4,780</td>
+                                <td class="text-success fw-medium">+27.78%</td>
+                                <td class="fw-semibold">$ 7.5</td>
+                                <td class="text-muted">3.46</td>
+                                <td class="text-muted pe-4">$80</td>
+                            </tr>
+                            <tr>
+                                <td class="ps-4">
+                                    <div class="collection-info d-flex align-items-center gap-3">
+                                        <img src="image (2).png" class="rounded" alt="Alex Co." style="width: 40px; height: 40px;">
+                                        <div>
+                                            <strong class="d-block">Alex Co.</strong>
+                                            <span class="text-muted small">By Alex</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="fw-semibold">$ 8,456</td>
+                                <td class="text-success fw-medium">+27.78%</td>
+                                <td class="fw-semibold">$ 3.5</td>
+                                <td class="text-muted">2.26</td>
+                                <td class="text-muted pe-4">$80</td>
+                            </tr>
+                            <tr>
+                                <td class="ps-4">
+                                    <div class="collection-info d-flex align-items-center gap-3">
+                                        <img src="image (3).png" class="rounded" alt="Alex Co." style="width: 40px; height: 40px;">
+                                        <div>
+                                            <strong class="d-block">Alex Co.</strong>
+                                            <span class="text-muted small">By Alex</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="fw-semibold">$ 4,780</td>
+                                <td class="text-success fw-medium">+27.78%</td>
+                                <td class="fw-semibold">$ 7.5</td>
+                                <td class="text-muted">3.46</td>
+                                <td class="text-muted pe-4">$80</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция Just Unleash -->
+    <section class="unleash-section py-5 my-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="unleash-text">
+                        <h2 class="display-4 fw-bold mb-2">Just Unleash</h2>
+                        <h3 class="display-6 fw-semibold mb-5">Your Inner Collector</h3>
+                        <div class="features-list">
+                            <div class="row g-4">
+                                <div class="col-12">
+                                    <div class="feature-item d-flex align-items-start gap-4 p-4 rounded-3">
+                                        <div class="feature-icon fs-1">🎯</div>
+                                        <div class="feature-text">
+                                            <h4 class="h5 fw-semibold mb-2">How to Use a Global Virtual</h4>
+                                            <p class="text-muted mb-0">Learn to navigate the worldwide virtual marketplace with ease</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="feature-item d-flex align-items-start gap-4 p-4 rounded-3">
+                                        <div class="feature-icon fs-1">🧠</div>
+                                        <div class="feature-text">
+                                            <h4 class="h5 fw-semibold mb-2">Help Your Mind and Help You</h4>
+                                            <p class="text-muted mb-0">Discover how collecting can enhance your mental well-being</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="feature-item d-flex align-items-start gap-4 p-4 rounded-3">
+                                        <div class="feature-icon fs-1">🌐</div>
+                                        <div class="feature-text">
+                                            <h4 class="h5 fw-semibold mb-2">Have a Virtual Identity</h4>
+                                            <p class="text-muted mb-0">Create and maintain your unique digital presence</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="unleash-image text-center">
+                        <img src="Illustration Left.png" class="img-fluid rounded-3 shadow-lg" alt="Unleash Your Inner Collector">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция FAQ -->
+    <section class="faq-section bg-light py-5 my-5" id="faq">
+        <div class="container">
+            <h2 class="text-center display-4 fw-bold mb-5">Frequently Asked Questions</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item border-0 mb-3 shadow-sm">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    What is an NFT?
+                                </button>
+                            </h3>
+                            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-muted">
+                                    NFT stands for Non-Fungible Token. It's a unique digital asset that represents ownership of a specific item or piece of content, stored on a blockchain. Unlike cryptocurrencies, each NFT is unique and cannot be exchanged on a one-to-one basis.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0 mb-3 shadow-sm">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    What can I use NFTs for?
+                                </button>
+                            </h3>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-muted">
+                                    NFTs can be used for digital art collection, gaming assets, virtual real estate, collectibles, music and video content, domain names, and even real-world asset tokenization. They enable true digital ownership and provenance tracking.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0 mb-3 shadow-sm">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    What is the difference between an NFT and cryptocurrency?
+                                </button>
+                            </h3>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-muted">
+                                    Cryptocurrencies like Bitcoin or Ethereum are fungible, meaning each unit is identical and interchangeable. NFTs are non-fungible, meaning each token is unique and cannot be replaced by another identical token. Think of cryptocurrency like money, and NFTs like unique collectible items.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0 mb-3 shadow-sm">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    How much is an NFT worth?
+                                </button>
+                            </h3>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-muted">
+                                    An NFT's value is determined by factors like rarity, utility, creator reputation, community demand, and historical significance. Prices can range from a few dollars to millions. The market determines the value through bidding and sales.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0 shadow-sm">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                    How do I purchase an NFT on your platform?
+                                </button>
+                            </h3>
+                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-muted">
+                                    To purchase an NFT on our platform: 1) Connect your crypto wallet, 2) Ensure you have sufficient cryptocurrency (usually ETH), 3) Browse available NFTs, 4) Place a bid or buy at the listed price, 5) Confirm the transaction in your wallet. The NFT will then be transferred to your wallet address.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция Create and Sell NFTs -->
+    <section class="create-sell-section bg-dark text-white py-5 my-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="create-sell-text">
+                        <h2 class="display-4 fw-bold mb-5">Create and Sell NFTs</h2>
+                        <div class="features-grid row g-4 mb-5">
+                            <div class="col-12">
+                                <div class="feature-card bg-white bg-opacity-10 rounded-3 p-4 border border-white border-opacity-20">
+                                    <h3 class="h4 fw-semibold mb-3">WORKS USING NET PGA+</h3>
+                                    <p class="text-white text-opacity-80 mb-0">Advanced blockchain technology for secure and efficient NFT transactions</p>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="feature-card bg-white bg-opacity-10 rounded-3 p-4 border border-white border-opacity-20">
+                                    <h3 class="h4 fw-semibold mb-3">Expiration</h3>
+                                    <p class="text-white text-opacity-80 mb-0">Set time limits for your NFT auctions and listings</p>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="feature-card bg-white bg-opacity-10 rounded-3 p-4 border border-white border-opacity-20">
+                                    <h3 class="h4 fw-semibold mb-3">Safariware</h3>
+                                    <p class="text-white text-opacity-80 mb-0">Secure digital asset management and protection system</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="cta-button btn btn-light btn-lg rounded-pill px-5 fw-semibold">Start Creating Now</button>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="create-sell-image text-center">
+                        <img src="Rectangle 3.png" class="img-fluid rounded-3 shadow-lg" alt="Create and Sell NFTs">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция Creator -->
+    <section class="creator-section py-5 my-5">
+        <div class="container">
+            <h2 class="text-center display-5 fw-bold mb-5">From Creator</h2>
+            <div class="row g-4">
+                <div class="col-md-4 col-lg-2">
+                    <div class="creator-card bg-white rounded-3 shadow-sm overflow-hidden h-100">
+                        <img src="Rectangle 283.png" class="img-fluid w-100" style="height: 200px; object-fit: cover;" alt="Sun-Glass">
+                        <div class="p-3">
+                            <p class="creator-name fw-medium mb-1 d-flex align-items-center">
+                                Perperzon <span class="verified text-primary ms-1">✓</span>
+                            </p>
+                            <p class="item-name text-muted small mb-3">Sun-Glass</p>
+                            <div class="card-footer d-flex justify-content-between text-muted small">
+                                <span><i class="fa fa-caret-up"></i> 16,4</span>
+                                <span><i class="fa fa-heart-o"></i> 200</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-2">
+                    <div class="creator-card bg-white rounded-3 shadow-sm overflow-hidden h-100">
+                        <img src="Group 94.png" class="img-fluid w-100" style="height: 200px; object-fit: cover;" alt="Sun-Glass">
+                        <div class="p-3">
+                            <p class="creator-name fw-medium mb-1 d-flex align-items-center">
+                                Perperzon <span class="verified text-primary ms-1">✓</span>
+                            </p>
+                            <p class="item-name text-muted small mb-3">Sun-Glass</p>
+                            <div class="card-footer d-flex justify-content-between text-muted small">
+                                <span><i class="fa fa-caret-up"></i> 16,4</span>
+                                <span><i class="fa fa-heart-o"></i> 200</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-2">
+                    <div class="creator-card bg-white rounded-3 shadow-sm overflow-hidden h-100">
+                        <img src="Group 94 (1).png" class="img-fluid w-100" style="height: 200px; object-fit: cover;" alt="Sun-Glass">
+                        <div class="p-3">
+                            <p class="creator-name fw-medium mb-1 d-flex align-items-center">
+                                Perperzon <span class="verified text-primary ms-1">✓</span>
+                            </p>
+                            <p class="item-name text-muted small mb-3">Sun-Glass</p>
+                            <div class="card-footer d-flex justify-content-between text-muted small">
+                                <span><i class="fa fa-caret-up"></i> 16,4</span>
+                                <span><i class="fa fa-heart-o"></i> 200</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-2">
+                    <div class="creator-card bg-white rounded-3 shadow-sm overflow-hidden h-100">
+                        <img src="Group 94 (2).png" class="img-fluid w-100" style="height: 200px; object-fit: cover;" alt="Sun-Glass">
+                        <div class="p-3">
+                            <p class="creator-name fw-medium mb-1 d-flex align-items-center">
+                                Perperzon <span class="verified text-primary ms-1">✓</span>
+                            </p>
+                            <p class="item-name text-muted small mb-3">Sun-Glass</p>
+                            <div class="card-footer d-flex justify-content-between text-muted small">
+                                <span><i class="fa fa-caret-up"></i> 16,4</span>
+                                <span><i class="fa fa-heart-o"></i> 200</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-2">
+                    <div class="creator-card bg-white rounded-3 shadow-sm overflow-hidden h-100">
+                        <img src="Group 94 (3).png" class="img-fluid w-100" style="height: 200px; object-fit: cover;" alt="Sun-Glass">
+                        <div class="p-3">
+                            <p class="creator-name fw-medium mb-1 d-flex align-items-center">
+                                Perperzon <span class="verified text-primary ms-1">✓</span>
+                            </p>
+                            <p class="item-name text-muted small mb-3">Sun-Glass</p>
+                            <div class="card-footer d-flex justify-content-between text-muted small">
+                                <span><i class="fa fa-caret-up"></i> 16,4</span>
+                                <span><i class="fa fa-heart-o"></i> 200</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ДОПОЛНИТЕЛЬНЫЙ КОМПОНЕНТ 2: Toast Notifications -->
+    <div class="toast-container position-fixed top-0 end-0 p-3">
+        <div id="liveToast" class="toast" role="alert">
+            <div class="toast-header">
+                <i class="fa fa-bell text-primary me-2"></i>
+                <strong class="me-auto">Notification</strong>
+                <small>just now</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+            </div>
+            <div class="toast-body">
+                🎉 New bid placed on Project Sun-Glass! Check it out.
+            </div>
+        </div>
+    </div>
+
+    <!-- Кнопка для демонстрации Toast -->
+    <div class="text-center mb-5">
+        <button type="button" class="btn btn-outline-primary" id="toastBtn">
+            <i class="fa fa-bell me-2"></i>Test Notification
+        </button>
+    </div>
+
+    <!-- Модальные окна -->
+    
+    <!-- Модальное окно для подключения кошелька -->
+    <div class="modal fade" id="walletModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Connect Your Wallet</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center mb-4">
+                        <div class="display-4 mb-3">👛</div>
+                        <p class="text-muted">Choose your wallet provider to connect to the marketplace</p>
+                    </div>
+                    
+                    <div class="d-grid gap-3">
+                        <button class="btn btn-outline-dark btn-lg d-flex align-items-center justify-content-center gap-3">
+                            <i class="fa fa-metagram"></i>
+                            MetaMask
+                        </button>
+                        <button class="btn btn-outline-primary btn-lg d-flex align-items-center justify-content-center gap-3">
+                            <i class="fa fa-wallet"></i>
+                            WalletConnect
+                        </button>
+                        <button class="btn btn-outline-success btn-lg d-flex align-items-center justify-content-center gap-3">
+                            <i class="fa fa-coin"></i>
+                            Coinbase Wallet
+                        </button>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно для ставки -->
+    <div class="modal fade" id="bidModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Place Your Bid</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="needs-validation" novalidate id="modalBidForm">
+                        <div class="mb-3">
+                            <label class="form-label">Bid Amount (ETH)</label>
+                            <input type="number" class="form-control" placeholder="0.00" min="1.75" step="0.01" required>
+                            <div class="form-text">Current bid: 1.75 ETH. Minimum bid: 1.76 ETH</div>
+                            <div class="invalid-feedback">
+                                Please enter a bid higher than the current bid.
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">Your Wallet</label>
+                            <select class="form-select" required>
+                                <option value="">Select wallet</option>
+                                <option value="meta">MetaMask</option>
+                                <option value="wallet">WalletConnect</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" required>
+                            <label class="form-check-label">
+                                I agree to the <a href="#" class="text-decoration-none">terms and conditions</a>
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" form="modalBidForm" class="btn btn-primary">Place Bid</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-light py-4 mt-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="footer-logo d-flex align-items-center">
+                        <img src="Wave.png" alt="DiveSeq Logo" style="height: 30px;">
+                        <span class="fw-medium fs-5 ms-2">DiveSea</span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="footer-links d-flex justify-content-md-end flex-wrap gap-3 mt-3 mt-md-0">
+                        <a href="#" class="text-muted text-decoration-none">Privacy Policy</a>
+                        <a href="#" class="text-muted text-decoration-none">Term & Conditions</a>
+                        <a href="#" class="text-muted text-decoration-none">About Us</a>
+                        <a href="#" class="text-muted text-decoration-none">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

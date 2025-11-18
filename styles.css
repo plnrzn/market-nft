@@ -1,0 +1,325 @@
+/* Кастомные стили дополняющие Bootstrap */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+/* Кастомные цвета и эффекты */
+.bg-gradient-dark {
+    background: linear-gradient(135deg, #000000 0%, #333333 100%);
+}
+
+.object-fit-cover {
+    object-fit: cover;
+}
+
+/* Анимации для карточек */
+.creator-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.creator-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card {
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-3px);
+}
+
+/* Кастомные стили для секций */
+.unleash-section {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.create-sell-section {
+    background: linear-gradient(135deg, #000000 0%, #333333 100%);
+}
+
+/* Адаптация кастомных элементов под Bootstrap */
+.back-btn {
+    background: none;
+    border: none;
+    color: #007bff;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.back-btn:hover {
+    color: #0056b3;
+}
+
+.bid-btn, .cta-button {
+    transition: all 0.3s ease;
+}
+
+.bid-btn:hover, .cta-button:hover {
+    transform: translateY(-2px);
+}
+
+/* Дополнительные утилиты */
+.shadow-custom {
+    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+}
+
+/* Адаптивность изображений */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Кастомные отступы */
+.section-py {
+    padding: 4rem 0;
+}
+
+/* Стили для секции с табами */
+.tabs-section .nav-tabs {
+    border-bottom: 2px solid #dee2e6;
+}
+
+.tabs-section .nav-tabs .nav-link {
+    border: none;
+    color: #6c757d;
+    padding: 1rem 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.tabs-section .nav-tabs .nav-link:hover {
+    border: none;
+    color: #495057;
+}
+
+.tabs-section .nav-tabs .nav-link.active {
+    background: none;
+    border: none;
+    color: #000;
+    border-bottom: 3px solid #000 !important;
+    font-weight: 600;
+}
+
+/* Стили для карусели */
+.slider-section .carousel-item {
+    min-height: 400px;
+}
+
+.min-vh-50 {
+    min-height: 50vh;
+}
+
+.bg-gradient-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+}
+
+.bg-gradient-success {
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%) !important;
+}
+
+.bg-gradient-warning {
+    background: linear-gradient(135deg, #f7971e 0%, #ffd200 100%) !important;
+}
+
+/* Стили для модальных окон */
+.modal-content {
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+
+.modal-header {
+    border-bottom: 1px solid #e9ecef;
+    padding: 1.5rem;
+}
+
+.modal-footer {
+    border-top: 1px solid #e9ecef;
+    padding: 1rem 1.5rem;
+}
+
+/* Анимации */
+.carousel-item {
+    transition: transform 0.6s ease-in-out;
+}
+
+.tab-pane {
+    transition: opacity 0.3s ease;
+}
+
+/* Кастомные стили для feature items */
+.feature-item {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s, background 0.3s;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* ДОПОЛНИТЕЛЬНЫЕ СТИЛИ ДЛЯ НОВЫХ КОМПОНЕНТОВ */
+
+/* Стили для Progress Bars */
+.progress-section .progress {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-section .progress-bar {
+    border-radius: 10px;
+    transition: width 0.8s ease-in-out;
+}
+
+.progress-section .card {
+    transition: transform 0.3s ease;
+}
+
+.progress-section .card:hover {
+    transform: translateY(-5px);
+}
+
+.bg-purple {
+    background-color: #6f42c1 !important;
+}
+
+/* Стили для Toast Notifications */
+.toast {
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    border: none;
+}
+
+.toast-header {
+    background: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    border-radius: 12px 12px 0 0;
+}
+
+.toast-body {
+    background: white;
+    border-radius: 0 0 12px 12px;
+    font-weight: 500;
+}
+
+/* Кнопка для тестирования Toast */
+#toastBtn {
+    transition: all 0.3s ease;
+    border: 2px solid #007bff;
+}
+
+#toastBtn:hover {
+    background-color: #007bff;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Анимации для новых компонентов */
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.toast.show {
+    animation: slideInRight 0.3s ease-out;
+}
+
+/* Ховер-эффекты для прогресс-баров */
+.progress-bar {
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .tabs-section .nav-tabs .nav-link {
+        padding: 0.75rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .slider-section .carousel-item {
+        min-height: 300px;
+    }
+    
+    .min-vh-50 {
+        min-height: 40vh;
+    }
+    
+    .section-py {
+        padding: 2rem 0;
+    }
+    
+    .display-4 {
+        font-size: 2.5rem;
+    }
+    
+    .display-5 {
+        font-size: 2rem;
+    }
+    
+    .display-6 {
+        font-size: 1.75rem;
+    }
+    
+    .progress-section .card {
+        margin-bottom: 1.5rem;
+    }
+    
+    .toast {
+        margin: 0.5rem;
+        width: calc(100% - 1rem);
+    }
+}
+
+@media (max-width: 576px) {
+    .creator-card {
+        margin-bottom: 1rem;
+    }
+    
+    .bid-input {
+        flex-direction: column;
+    }
+    
+    .bid-input .form-select {
+        width: 100% !important;
+        margin-bottom: 0.5rem;
+    }
+    
+    .owners {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .progress-section .progress {
+        height: 6px;
+    }
+}
